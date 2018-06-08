@@ -11,6 +11,7 @@ jobs:
       script: ./gradlew build
 
     - stage: deploy
+      install: true
       script: skip
       deploy:
         provider: cloudfoundry
@@ -18,4 +19,4 @@ jobs:
         password: $PASS
         api: https://api.run.pivotal.io
         organization: JCore
-        space: Fast Track CICD
+        space: "Fast Track CICD"
