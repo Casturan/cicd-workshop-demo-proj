@@ -1,3 +1,4 @@
 language: java
 
-install: ./gradlew build
+install: true
+script: ./gradlew build
