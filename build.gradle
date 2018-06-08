@@ -42,7 +42,7 @@ ext {
     frontendDir = "$projectDir/src/main/webapp"
 }
  processResources {
-     dependsOn "frontendCopy"
+//     dependsOn "frontendCopy"
  }
 
  task buildAngular(type: NpmTask) {
