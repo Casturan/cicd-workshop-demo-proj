@@ -5,6 +5,17 @@ jobs:
     - stage: test
       install: true
       script: ./gradlew test
+
     - stage: build
       install: true
       script: ./gradlew build
+
+    - stage: deploy
+      script: skip
+      deploy:
+        provider: cloudfoundry
+        username: $USER
+        password: $PASS
+        api: https://api.run.pivotal.io
+        organization: JCore
+        space: Fast Track CICD
