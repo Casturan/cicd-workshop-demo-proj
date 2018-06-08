@@ -1,10 +1,11 @@
-language: java
 
 jobs:
   include:
     - stage: test
-    - install: true
-    - script: ./gradlew test
+      language: java
+      install: true
+      script: ./gradlew test
     - stage: build
-    - install: true
-    - script: ./gradlew build
+      language: java
+      install: true
+      script: ./gradlew build
